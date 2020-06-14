@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
-const generatedMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 const api = require("./utils/api")
 
 // Choose a license for my application
@@ -98,7 +98,6 @@ async function init() {
 
         // add username, gitHubImage, and gitHubEmail as objects into the responses object
         responses.username = username;
-        responses.image = gitHubImage;
         responses.email = gitHubEmail;
 
         // check for which license the user picked
@@ -122,7 +121,7 @@ async function init() {
         }
 
         // write data to readme using generateMarkdown
-        writeToFile(`generatedREADME.md`, generatedMarkdown(responses));
+        writeToFile(`generatedREADME.md`, generateMarkdown(responses));
 
     } catch (err){
         console.log(err);

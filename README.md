@@ -7,3 +7,4 @@ This application uses the following: Node.js, Axios, Dotenv, and Inquirer.
 
 ## Functionality Demonstration
 ![alt text](assets/images/Demo.gif)
+![alt text](assets/images/generated-readme.png)
